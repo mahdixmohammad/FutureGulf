@@ -1,0 +1,314 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins.otf);
+}
+body {
+    background: white;
+    font-family: Poppins, "Arial Nova Condensed", "Calibri", sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+body h2, body p {
+    margin: 15px 0;
+}
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0 100px;
+    transition: 0.5s;
+}
+nav.sticky {
+    background: rgba(255, 255, 255, 0.9);
+    height: 70px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px 0.5px black;
+}
+nav.sticky ul li a {
+    color: rgb(75, 75, 75);
+}
+nav.sticky ul li a:hover {
+    border-bottom: 3px solid rgb(75, 75, 75);
+}
+nav.sticky .hamburger .line {
+    background: rgb(75, 75, 75);
+}
+#logo {
+    width: 50px;
+    object-fit: contain;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+nav ul li a:hover {
+    border-bottom: 3px solid white;
+    transition: all 0.1s ease-out;
+}
+@media only screen and (max-width: 550px) {
+    nav {
+        justify-content: center;
+    }
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger .line {
+    background: white;
+    width: 30px;
+    height: 3.5px;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 440px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        right: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+}
+/* when the user clicks the hamburger icon (small devices only) */
+.active {
+    position: fixed;
+}
+.active * {
+    color: white !important;
+    transition: 0.6s;
+}
+.active ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    top: 69px;
+    left: 0;
+    text-align: center;
+    box-shadow: 0 1px 1px 0.1px black;
+}
+nav.sticky.active{
+    background: rgb(255, 255, 255);
+}
+nav.sticky.active ul {
+    background: rgba(255, 255, 255, 0.96);
+}
+nav.sticky.active ul li a {
+    color: rgb(75, 75, 75) !important;
+}
+.active #logo {
+    margin: auto;
+}
+.active .hamburger {
+    display: block;
+    position: fixed;
+    right: 20px;
+}
+.active ul li {
+    margin-top: 50px !important;
+    font-size: 22px !important;
+    line-height: 40px;
+}
+#home {
+    background: rgb(18, 0, 0);
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+#headline {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: white;
+    width: 100%;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    letter-spacing: -1px;
+    transform: translate(-50%, -40%);
+}
+#headline h6 {
+    color: rgb(210, 210, 210);
+    margin-bottom: 15px;
+}
+#contact-button {
+    padding: 1vw 3.8vw;
+    text-align: center;
+    background: rgb(0, 131, 148);
+    color:rgb(0, 229, 255);
+    backdrop-filter: blur(5px);
+    font-family: "Trebuchet MS";
+    font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+    font-weight: 900;
+    border-radius: 5px;
+}
+#contact-button:hover {
+    border: 2px solid rgb(0, 172, 195);
+    color:rgb(24, 247, 255);
+    transition: 0.3s;
+}
+#home-cover-front {
+    width: 102%;
+    min-height: 650px;
+    height: 700px;
+    object-fit: cover;
+}
+@media only screen and (max-width: 960px) {
+    #home-cover-front {
+        object-fit: cover;
+    }
+}
+#cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 650px;
+    height: 700px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(1px);
+}
+#about {
+    margin: 50px auto;
+    text-align: left;
+    padding: 25px 6%;
+    width: 80%;
+    height: 900px;
+    box-shadow: 0 0 5px 1px black;
+    border-radius: 25px;
+    font-size: clamp(0.9rem, 1.3vw, 5rem);
+    background: rgb(240, 240, 240);
+}
+#about * {
+    margin: 15px 0;
+}
+#about h2 {
+    text-align: center;
+}
+#brands {
+    margin: 50px auto;
+    text-align: left;
+    padding: 25px 100px;
+    width: 80%;
+    height: 900px;
+    box-shadow: 0 0 5px 1px black;
+    border-radius: 25px;
+    background: rgb(240, 240, 240);
+}
+#brands h2 {
+    text-align: center;
+}
+#contact {
+    display: flex;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 850px;
+    width: 100%;
+    background: rgb(0, 172, 195);
+}
+form h2:first-child {
+    margin: 0;
+}
+form p {
+    margin: 0;
+}
+form a {
+    color: rgb(0, 188, 213);
+}
+form {
+    background: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 0 5px 1px black;
+}
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: rgb(211, 211, 211);
+    color: white;
+    font-size: 16px;
+    resize: none;
+}
+::placeholder {
+    color:rgb(75, 75, 75); 
+    font-family: "Calibri";
+    font-size: 16px;
+    font-weight: 400;
+}
+form button {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin: 20px auto 0;
+    background: rgba(0, 188, 213, 0.5);
+    border: 2px solid black;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+}
+form button:hover {
+    background: rgb(0, 188, 213);
+    box-shadow: 0 0 10px rgb(0, 188, 213);
+    transition: 0.4s;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 155px;
+    font-size: 14px;
+}
+footer * {
+    color: rgb(130, 130, 130);
+}
+footer #logo {
+    margin: 0;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+}
+footer ul li {
+    margin: 0 5px;
+}
+.social-media:hover {
+    border-bottom: 2px solid rgb(130, 130, 130);
+    transition: 0.1s;
+}
