@@ -167,9 +167,10 @@ nav.sticky.active ul li a {
     border-radius: 5px;
 }
 #contact-button:hover {
-    border: 2px solid rgb(0, 172, 195);
+    border: 2px solid rgb(24, 247, 255);
+    box-shadow: 0 0 5px rgb(24, 247, 255);
     color:rgb(24, 247, 255);
-    transition: 0.3s;
+    transition: 0.3s linear;
 }
 #home-cover-front {
     width: 102%;
@@ -192,12 +193,20 @@ nav.sticky.active ul li a {
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(1px);
 }
+h1 {
+    font-family: "Arial Nova Condensed";
+    letter-spacing: -1px;
+    font-size: 46px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(2.3rem, 7vw, 2.7rem);
+    margin-bottom: 20px;
+}
 #about {
-    margin: 50px auto;
+    margin: 70px auto;
     text-align: left;
-    padding: 25px 6%;
+    padding: 75px 6%;
     width: 80%;
-    height: 900px;
     box-shadow: 0 0 5px 1px black;
     border-radius: 25px;
     font-size: clamp(0.9rem, 1.3vw, 5rem);
@@ -209,20 +218,102 @@ nav.sticky.active ul li a {
 #about h2 {
     text-align: center;
 }
-#brands {
+/* #brands {
     margin: 50px auto;
     text-align: left;
-    padding: 25px 100px;
+    padding: 25px 6%;
     width: 80%;
-    height: 900px;
     box-shadow: 0 0 5px 1px black;
     border-radius: 25px;
+    font-size: clamp(0.9rem, 1.3vw, 5rem);
     background: rgb(240, 240, 240);
 }
 #brands h2 {
     text-align: center;
+} */
+#brands {
+    display: flex;
+    flex-direction: column;
 }
-#contact {
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-content: center;
+    /* margin: 0 90px; */
+}
+#brands h1 {
+    margin-bottom: 0;
+}
+#brands h2 {
+    font-size: 35px;
+    font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+    margin-bottom: 0;
+    text-align: left;
+}
+#brands p {
+    font-size: 16px;
+    text-align: justify;
+    /* width: 400px; */
+    font-size: clamp(0.8rem, 1vw, 1.1rem) !important;
+}
+.company-logo {
+    height: 70px !important;
+    position: absolute;
+    right: 0;
+}
+#brands img {
+    /* width: 25vw;
+    min-width: 200px;
+    max-width: 350px; */
+    height: 25vw;
+    min-height: 200px;
+    max-height: 350px;
+    border: 1px solid white;
+    box-shadow: 0 0 8px white;
+}
+#food-time {
+    width: 100%;
+    height: 600px;
+    background: rgb(57, 57, 57);
+    padding: 100px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+}
+@media only screen and (max-width: 800px) {
+    #food-time {
+        height: 650px;
+        flex-direction: column;
+    }
+    #brands img {
+        height: 50vw !important;
+        min-height: auto;
+        max-height: 350px;
+        /* height: 0vw !important;
+        min-height: 300px !important;
+        max-height: 800px !important; */
+    }
+    .description {
+        width: 75vw;
+        max-width: 520px;
+    }
+}
+#pizza-house {
+    height: 600px;
+    background: rgb(48, 0, 0);
+}
+#ice-pack {
+    height: 600px;
+    background: rgb(0, 16, 48);
+}
+#one-million {
+    height: 600px;
+    background: rgb(25, 25, 25);
+}
+/* #contact {
     display: flex;
     padding: 0;
     text-align: center;
@@ -258,7 +349,7 @@ form input, form textarea {
     padding: 20px;
     outline: none;
     background: rgb(211, 211, 211);
-    color: white;
+    color: black;
     font-size: 16px;
     resize: none;
 }
@@ -285,6 +376,42 @@ form button:hover {
     background: rgb(0, 188, 213);
     box-shadow: 0 0 10px rgb(0, 188, 213);
     transition: 0.4s;
+} */
+#new-contact {
+    height: 800px;
+    width: 100%;
+    background: rgb(0, 172, 195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    color: black;
+}
+#wrapper {
+    background: white;
+    min-height: 650px;
+    min-width: fit-content;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 0 5px 1px black;
+    border-radius: 25px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(240, 240, 240); */
+}
+#new-contact h1 {
+    font-size: clamp(2.3rem, 7vw, 2.7rem);
+    margin-bottom: 20px;
+}
+address p {
+    margin: 7px 0;
+}
+iframe {
+    box-shadow: 0 0 5px 1px rgb(0, 172, 195);
+    width: 75vw;
+    max-width: 400px;
 }
 footer {
     display: flex;
