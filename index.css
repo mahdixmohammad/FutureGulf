@@ -143,7 +143,7 @@ nav.sticky.active ul li a {
 }
 #headline {
     position: absolute;
-    top: 40%;
+    top: 300px;
     left: 50%;
     color: white;
     width: 100%;
@@ -153,7 +153,7 @@ nav.sticky.active ul li a {
 }
 #headline h6 {
     color: rgb(210, 210, 210);
-    margin-bottom: 15px;
+    margin: 0 15px 16px 15px;
 }
 #contact-button {
     padding: 1vw 3.8vw;
@@ -194,6 +194,9 @@ nav.sticky.active ul li a {
     backdrop-filter: blur(1px);
 }
 h1 {
+    margin-bottom: 0 !important;
+}
+.title {
     font-family: "Arial Nova Condensed";
     letter-spacing: -1px;
     font-size: 46px;
@@ -218,19 +221,6 @@ h1 {
 #about h2 {
     text-align: center;
 }
-/* #brands {
-    margin: 50px auto;
-    text-align: left;
-    padding: 25px 6%;
-    width: 80%;
-    box-shadow: 0 0 5px 1px black;
-    border-radius: 25px;
-    font-size: clamp(0.9rem, 1.3vw, 5rem);
-    background: rgb(240, 240, 240);
-}
-#brands h2 {
-    text-align: center;
-} */
 #brands {
     display: flex;
     flex-direction: column;
@@ -241,7 +231,6 @@ h1 {
     width: 40%;
     justify-content: center;
     align-content: center;
-    /* margin: 0 90px; */
 }
 #brands h1 {
     margin-bottom: 0;
@@ -251,27 +240,42 @@ h1 {
     font-size: clamp(1.9rem, 2.8vw, 2.5rem);
     margin-bottom: 0;
     text-align: left;
+    color: white;
 }
 #brands p {
     font-size: 16px;
     text-align: justify;
-    /* width: 400px; */
     font-size: clamp(0.8rem, 1vw, 1.1rem) !important;
+    color: white;
 }
 .company-logo {
     height: 70px !important;
     position: absolute;
     right: 0;
 }
-#brands img {
-    /* width: 25vw;
-    min-width: 200px;
-    max-width: 350px; */
+#sublinks {
+    width: 18vw;
+    height: 5vw;
+    max-width: 180px;
+    max-height: 55px;
+    line-height: 5px;
+    background: rgb(48, 48, 48);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 3px 2px rgb(255, 255, 255);
+}
+.link {
+    height: 4vw;
+    max-height: 40px;
+}
+.brand-img {
     height: 25vw;
     min-height: 200px;
     max-height: 350px;
     border: 1px solid white;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 5px 0.1px white;
 }
 #food-time {
     width: 100%;
@@ -280,38 +284,71 @@ h1 {
     padding: 100px 20px;
     display: flex;
     justify-content: space-evenly;
-    color: white;
     align-items: center;
-}
-@media only screen and (max-width: 800px) {
-    #food-time {
-        height: 650px;
-        flex-direction: column;
-    }
-    #brands img {
-        height: 50vw !important;
-        min-height: auto;
-        max-height: 350px;
-        /* height: 0vw !important;
-        min-height: 300px !important;
-        max-height: 800px !important; */
-    }
-    .description {
-        width: 75vw;
-        max-width: 520px;
-    }
 }
 #pizza-house {
     height: 600px;
     background: rgb(48, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 #ice-pack {
     height: 600px;
     background: rgb(0, 16, 48);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 #one-million {
     height: 600px;
     background: rgb(25, 25, 25);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media only screen and (max-width: 800px) {
+    #food-time {
+        height: 700px;
+        flex-direction: column;
+    }
+    #pizza-house {
+        height: 700px;
+        flex-direction: column;
+    }
+    #ice-pack {
+        height: 700px;
+        flex-direction: column;
+    }
+    #one-million {
+        height: 700px;
+        flex-direction: column;
+    }
+    .brand-img {
+        height: 50vw !important;
+        min-height: auto;
+        max-height: 350px;
+    }
+    .description {
+        width: 75vw;
+        margin-bottom: 30px;
+        max-width: 520px;
+    }
+    #sublinks {
+        /* width: 19vw;
+        height: 45px;
+        line-height: 5px; */
+        min-height: 40px;
+        min-width: 140px;
+    }
+    .link {
+        min-height: 25px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    #brands p {
+        text-align: left;
+    }
 }
 /* #contact {
     display: flex;
