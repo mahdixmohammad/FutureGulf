@@ -1,3 +1,6 @@
+:root {
+    color-scheme: only light;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -12,9 +15,13 @@ html {
     font-family: Poppins;
     src: url(fonts/Poppins.otf);
 }
+@font-face {
+    font-family: ArialNovaC;
+    src: url(fonts/ArialNovaCond.ttf);
+}
 body {
     background: white;
-    font-family: Poppins, "Arial Nova Condensed", "Calibri", sans-serif;
+    font-family: Poppins, ArialNovaC, "Calibri", sans-serif;
     text-align: center;
     font-size: 18px;
 }
@@ -197,7 +204,7 @@ h1 {
     margin-bottom: 0 !important;
 }
 .title {
-    font-family: "Arial Nova Condensed";
+    font-family: ArialNovaC;
     letter-spacing: -1px;
     font-size: 46px;
     text-transform: uppercase;
@@ -335,9 +342,6 @@ h1 {
         max-width: 520px;
     }
     #sublinks {
-        /* width: 19vw;
-        height: 45px;
-        line-height: 5px; */
         min-height: 40px;
         min-width: 140px;
     }
@@ -421,11 +425,10 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
     color: black;
 }
 #wrapper {
-    background: white;
+    background-color: white;
     min-height: 650px;
     min-width: fit-content;
     width: 90%;
@@ -436,7 +439,6 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: rgb(240, 240, 240); */
 }
 #new-contact h1 {
     font-size: clamp(2.3rem, 7vw, 2.7rem);
