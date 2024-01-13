@@ -217,9 +217,10 @@ h1 {
     text-align: left;
     padding: 75px 6%;
     width: 80%;
+    max-width: 900px;
     box-shadow: 0 0 5px 1px black;
     border-radius: 25px;
-    font-size: clamp(0.9rem, 1.3vw, 5rem);
+    font-size: clamp(0.9rem, 1.2vw, 3rem);
     background: rgb(240, 240, 240);
 }
 #about * {
@@ -244,7 +245,7 @@ h1 {
 }
 #brands h2 {
     font-size: 35px;
-    font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+    font-size: clamp(2.2rem, 3.3vw, 2.6rem) !important;
     margin-bottom: 0;
     text-align: left;
     color: white;
@@ -252,7 +253,7 @@ h1 {
 #brands p {
     font-size: 16px;
     text-align: justify;
-    font-size: clamp(0.8rem, 1vw, 1.1rem) !important;
+    font-size: clamp(0.9rem, 1.1vw, 1.3rem);
     color: white;
 }
 .company-logo {
@@ -260,22 +261,55 @@ h1 {
     position: absolute;
     right: 0;
 }
+#clickables {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #sublinks {
-    width: 18vw;
-    height: 5vw;
-    max-width: 180px;
-    max-height: 55px;
+    width: 17vw;
+    height: 4vw;
+    max-width: 170px;
+    min-height: 40px;
+    max-height: 50px;
     line-height: 5px;
-    background: rgb(48, 48, 48);
+    background: rgb(35, 35, 35);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 0 3px 2px rgb(255, 255, 255);
+    box-shadow: 0 0 1px 1px rgb(255, 255, 255);
 }
 .link {
+    height: 2.9vw;
+    max-height: 35px;
+}
+#sublinks:hover {
+    box-shadow: 0 0 3px 2.5px rgb(255, 255, 255);
+    transition: 0.3s;
+}
+#menu {
+    width: 17vw;
     height: 4vw;
-    max-height: 40px;
+    max-width: 170px;
+    min-height: 40px;
+    max-height: 50px;
+    line-height: 5px;
+    background: rgb(192, 55, 55);
+    background: rgb(234, 234, 234);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(192, 55, 55);
+    font-weight: 900;
+    margin-right: 15px;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+#menu:hover{
+    box-shadow: 0 0 3px 2.5px rgb(208, 75, 75);
+    transition: 0.3s;
 }
 .brand-img {
     height: 25vw;
@@ -284,57 +318,39 @@ h1 {
     border: 1px solid white;
     box-shadow: 0 0 5px 0.1px white;
 }
-#food-time {
+#foodtime {
     width: 100%;
     height: 600px;
-    background: rgb(57, 57, 57);
+    background: rgb(69, 0, 0);
     padding: 100px 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#pizza-house {
-    height: 600px;
-    background: rgb(48, 0, 0);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#ice-pack {
-    height: 600px;
-    background: rgb(0, 16, 48);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 #one-million {
     height: 600px;
-    background: rgb(25, 25, 25);
+    background: rgb(45, 45, 45);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#pizzahouse {
+    height: 600px;
+    background: rgb(195, 138, 15);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#ice-pack {
+    height: 600px;
+    background: rgb(0, 24, 72);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 @media only screen and (max-width: 800px) {
-    #food-time {
-        height: 700px;
-        flex-direction: column;
-    }
-    #pizza-house {
-        height: 700px;
-        flex-direction: column;
-    }
-    #ice-pack {
-        height: 700px;
-        flex-direction: column;
-    }
-    #one-million {
-        height: 700px;
-        flex-direction: column;
-    }
-    .brand-img {
-        height: 50vw !important;
-        min-height: auto;
-        max-height: 350px;
+    #contact-button {
+        padding: 8px 30px;
     }
     .description {
         width: 75vw;
@@ -342,11 +358,71 @@ h1 {
         max-width: 520px;
     }
     #sublinks {
+        width: 19vw;
         min-height: 40px;
-        min-width: 140px;
+        min-width: 125px;
     }
     .link {
         min-height: 25px;
+    }
+    #menu {
+        width: 19vw;
+        min-height: 40px;
+        min-width: 115px;
+        margin-right: 3vw;
+    }
+    #foodtime {
+        height: 700px;
+        flex-direction: column;
+    }
+    #one-million {
+        height: 700px;
+        flex-direction: column;
+    }
+    #pizzahouse {
+        height: 700px;
+        flex-direction: column;
+    }
+    #ice-pack {
+        height: 700px;
+        flex-direction: column;
+    }
+    .brand-img {
+        height: 48vw !important;
+        min-height: auto;
+        max-height: 330px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #brands p {
+        font-size: 0.8rem;
+    }
+    #clickables {
+        width: 75vw !important;
+    }
+    #sublinks {
+        width: 45%;
+        min-width: 100px;
+    }
+    #menu {
+        width: 45%;
+        min-width: 100px;
+    }
+    #foodtime {
+        height: 650px;
+        justify-content: center;
+    }
+    #one-million {
+        height: 650px;
+        justify-content: center;
+    }
+    #pizzahouse {
+        height: 650px;
+        justify-content: center;
+    }
+    #ice-pack {
+        height: 650px;
+        justify-content: center;
     }
 }
 @media only screen and (max-width: 300px) {
@@ -418,7 +494,7 @@ form button:hover {
     box-shadow: 0 0 10px rgb(0, 188, 213);
     transition: 0.4s;
 } */
-#new-contact {
+#contact-us {
     height: 800px;
     width: 100%;
     background: rgb(0, 172, 195);
@@ -440,9 +516,9 @@ form button:hover {
     justify-content: center;
     align-items: center;
 }
-#new-contact h1 {
+#contact-us h1 {
     font-size: clamp(2.3rem, 7vw, 2.7rem);
-    margin-bottom: 20px;
+    margin-bottom: 15px !important;
 }
 address p {
     margin: 7px 0;
