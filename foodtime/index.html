@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodTime</title>
+    <link href="index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/foodtime-logo-cropped.jpg">
+</head>
+<body>
+    <nav>
+        <a href=""><img src="images/foodtime-nav-logo.jpg" id="logo"></a>
+        <ul>
+            <li>
+                <div class="arrow">
+                    <a href="#">Menu</a>
+                    <div>
+                        <span class="larr"></span>
+                        <span class="rarr"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="dropdown">
+        <ul>
+            <li><a onclick="menuClick('all')">All</a></li>
+            <li><a onclick="menuClick('pizza')">Pizza</a></li>
+            <li><a onclick="menuClick('chicken')">Chicken</a></li>
+            <li><a onclick="menuClick('crisps')">Crisps</a></li>
+            <li><a onclick="menuClick('burger')">Burger</a></li>
+            <li><a onclick="menuClick('wraps')">Wraps</a></li>
+            <li><a onclick="menuClick('sandwich')">Sandwich</a></li>
+            <li><a onclick="menuClick('calzone')">Calzone</a></li>
+            <li><a onclick="menuClick('fries')">Fries</a></li>
+            <li><a onclick="menuClick('boxes')">Boxes</a></li>
+            <li><a onclick="menuClick('rizzo')">Rizzo</a></li>
+            <li><a onclick="menuClick('italian')">Italian</a></li>
+            <li><a onclick="menuClick('appetizer')">Appetizer</a></li>
+            <li><a onclick="menuClick('salad')">Salad</a></li>
+            <li><a onclick="menuClick('kids')">Kids</a></li>
+            <li><a onclick="menuClick('drinks')">Drinks</a></li>
+        </ul>
+    </div>
+    <div id="menu">
+        <img src="images/pizza-menu-1.jpg" class="all pizza">
+        <img src="images/pizza-menu-2.jpg" class="all pizza">
+        <img src="images/pizza-menu-3.jpg" class="all pizza">
+        <img src="images/pizza-menu-4.jpg" class="all pizza">
+        <img src="images/pizza-menu-5.jpg" class="all pizza">
+        <img src="images/chicken-menu.jpg" class="all chicken">
+        <img src="images/crisps-menu.jpg" class="all crisps">
+        <img src="images/burger-menu-1.jpg" class="all burger">
+        <img src="images/burger-menu-2.jpg" class="all burger">
+        <img src="images/bread-tin-menu.jpg" class="all wraps">
+        <img src="images/sandwich-menu.jpg" class="all sandwich">
+        <img src="images/calzone-menu.jpg" class="all calzone">
+        <img src="images/fries-menu.jpg" class="all fries">
+        <img src="images/boxes-menu.jpg" class="all boxes">
+        <img src="images/rizzo-menu.jpg" class="all rizzo">
+        <img src="images/italian-menu.jpg" class="all italian">
+        <img src="images/hot-appetizer-menu.jpg" class="all appetizer">
+        <img src="images/salad-menu.jpg" class="all salad">
+        <img src="images/kids-menu.jpg" class="all kids">
+        <img src="images/drinks-menu.jpg" class="all drinks">
+    </div>
+    <footer>
+        <a href=""><img src="images/foodtime-nav-logo.jpg" id="logo"></a>
+        <ul>
+            <li><a href="https://www.futgulf.com" target="_blank" class="social-media">FutGulf</a></li>
+            <li><a href="https://www.instagram.com/foodtime_karbala/" target="_blank" class="social-media">Instagram</a></li>
+            <li><a href="https://www.facebook.com/foodtimeiraq" target="_blank" class="social-media">Facebook</a></li>
+        </ul>
+        <label class="copyright">Copyright &copy; Future Gulf Company 2024</label>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

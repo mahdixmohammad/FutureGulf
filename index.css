@@ -96,7 +96,8 @@ nav ul li a:hover {
         right: 20px;
     }
     nav ul {
-        display: none;
+        position: absolute;
+        top: -50vh;
     }
 }
 /* when the user clicks the hamburger icon (small devices only) */
@@ -105,7 +106,7 @@ nav ul li a:hover {
 }
 .active * {
     color: white !important;
-    transition: 0.6s;
+    transition: 0.5s;
 }
 .active ul {
     display: flex;
