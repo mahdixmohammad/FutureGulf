@@ -290,14 +290,13 @@ h1 {
     box-shadow: 0 0 3px 2.5px rgb(255, 255, 255);
     transition: 0.3s;
 }
-#menu {
+.menu {
     width: 17vw;
     height: 4vw;
     max-width: 170px;
     min-height: 40px;
     max-height: 50px;
     line-height: 5px;
-    background: rgb(192, 55, 55);
     background: rgb(234, 234, 234);
     border-radius: 20px;
     display: flex;
@@ -308,9 +307,15 @@ h1 {
     margin-right: 15px;
     font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
-#menu:hover{
-    box-shadow: 0 0 3px 2.5px rgb(208, 75, 75);
+.menu:hover {
+    box-shadow: 0.4px 0.6px 3px 2.5px rgb(208, 75, 75);
     transition: 0.3s;
+}
+#one-million-menu {
+    color: rgb(68, 68, 68);
+}
+#one-million-menu:hover {
+    box-shadow: 0.4px 0.6px 3px 2.5px rgb(132, 132, 132);
 }
 .brand-img {
     height: 25vw;
@@ -366,7 +371,7 @@ h1 {
     .link {
         min-height: 25px;
     }
-    #menu {
+    .menu {
         width: 19vw;
         min-height: 40px;
         min-width: 115px;
@@ -405,7 +410,7 @@ h1 {
         width: 45%;
         min-width: 100px;
     }
-    #menu {
+    .menu {
         width: 45%;
         min-width: 100px;
     }

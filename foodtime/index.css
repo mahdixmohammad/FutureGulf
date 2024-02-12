@@ -17,7 +17,7 @@
     src: url(fonts/ArialNovaCond.ttf);
 }
 body {
-    background: rgb(240, 240, 240);
+    background: rgba(255, 22, 22, 0.314);
     font-family: Poppins, ArialNovaC, "Calibri", sans-serif;
     text-align: center;
     font-size: 18px;
@@ -32,7 +32,7 @@ nav {
     z-index: 1000;
     padding: 0 100px;
     transition: 0.4s;
-    box-shadow: 0 0 0 1px rgb(130, 130, 130);
+    box-shadow: 0 0 0 1px rgb(197, 0, 0);
     background: white;
 }
 #logo {
@@ -193,7 +193,7 @@ footer {
     height: 165px;
     font-size: 14px;
     margin-top: 30px;
-    box-shadow: 0 0 0px 1px rgb(130, 130, 130);
+    box-shadow: 0 0 0px 1px rgb(197, 0, 0);
     background: rgb(255, 255, 255);
 }
 footer * {
