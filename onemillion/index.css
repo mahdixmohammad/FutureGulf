@@ -1,0 +1,218 @@
+:root {
+    color-scheme: only light;
+}
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins.otf);
+}
+@font-face {
+    font-family: ArialNovaC;
+    src: url(fonts/ArialNovaCond.ttf);
+}
+body {
+    background: rgba(225, 225, 225, 0.619);
+    font-family: Poppins, ArialNovaC, "Calibri", sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+nav {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 0 100px;
+    transition: 0.4s;
+    box-shadow: 0 0 0 1px rgb(130, 130, 130);
+    background: rgb(255, 255, 255);
+}
+#logo {
+    width: 85px;
+    object-fit: contain;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger .line {
+    background: rgb(130, 130, 130);
+    width: 30px;
+    height: 3.5px;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+.active * {
+    font-weight: 600;
+}
+.arrow {
+    cursor: pointer;
+    display: flex;
+}
+.arrow a:hover {
+    border-bottom: 0;
+}
+.arrow:hover {
+    border-bottom: 3px solid black;
+    transition: all 0.1s ease-out;
+}
+.arrow div {
+    margin-left: -5px;
+}
+.larr,
+.rarr {
+    position: relative;
+    margin:auto;
+    display: inline-flex;
+    width: 15px;
+    height: 3.5px;
+    background: rgb(90, 90, 90);
+    border-radius: 40px;
+    transition: 0.2s;
+}
+.larr {
+    left: 11px;
+    transform: rotate(45deg);
+}
+.rarr {
+    transform: rotate(-45deg);
+}
+.active .larr {
+    transform: rotate(-45deg);
+}
+.active .rarr {
+    transform: rotate(45deg);
+}
+nav ul {
+    display: flex;
+}
+nav ul li a {
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    font-weight: 500;
+}
+nav ul li a:hover {
+    border-bottom: 3px solid black;
+    transition: all 0.1s ease-out;
+}
+@media only screen and (max-width: 550px) {
+    /* .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    } */
+    nav {
+        /* justify-content: space-between; */
+        padding: 0 30px;
+    }
+    /* nav ul {
+        display: none;
+    } */
+}
+@media only screen and (max-width: 300px) {
+    nav {
+        padding: 5px;
+    }
+}
+.dropdown {
+    position: absolute;
+    top: -1000px;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(130, 130, 130);
+    width: 100%;
+    height: fit-content;
+    padding: 50px 150px;
+    transition: 0.6s;
+}
+.active.dropdown {
+    position: relative;
+    top: 0;
+}
+.dropdown ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 90px;
+    column-gap: 160px;
+    color: black;
+}
+.dropdown ul li {
+    flex-basis: 20%;
+}
+.dropdown ul li a {
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    font-weight: 500;
+    z-index: 1000;
+    cursor: pointer;
+    display: block;
+}
+@media only screen and (max-width: 700px) {
+    .dropdown {
+        height: fit-content;
+        padding: 30px;
+    }
+    .dropdown ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .dropdown ul li {
+        flex-basis: 0%;
+        text-align: center;
+    }
+}
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#menu img {
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 95vw;
+    max-width: 600px;
+    box-shadow: 0 0 2px 3px rgb(105, 105, 105);
+    transition: 0.5s;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 180px;
+    font-size: 14px;
+    margin-top: 30px;
+    box-shadow: 0 0 0px 1px rgb(130, 130, 130);
+    background: rgb(255, 255, 255);
+}
+footer * {
+    color: rgb(130, 130, 130);
+}
+footer #logo {
+    margin: 0;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+footer ul li {
+    margin: 0 5px;
+}
+.social-media:hover {
+    border-bottom: 2px solid rgb(130, 130, 130);
+    transition: 0.1s;
+}
