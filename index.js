@@ -15,7 +15,14 @@ window.addEventListener("scroll", function() {
 
 // user clicks on the hamburger icon (small devices only)
 hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector("nav");
+
 hamburger.onclick = function() {
-    let nav = document.querySelector("nav");
     nav.classList.toggle("active");
+
+    // ensures that the ui cannot be bugged (resets to original state)
+    if (dropdown.classList.contains("dropdown-active")) {
+        arrow.classList.toggle("arrow-active");
+        dropdown.classList.toggle("dropdown-active");
+    }
 }
