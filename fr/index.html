@@ -44,8 +44,31 @@
         </div>
     </nav>
     <section id="home">
-        <img src="../images/home_cover.png" id="home-cover-front">
+        <div class="slider">
+            <ul class="slides">
+                <li class="slide"><img src="../images/food-time-main.jpg" ></li>
+                <li class="slide"><img src="../images/home_cover.png" ></li>
+                <li class="slide"><img src="../images/future-gulf-team.jpg" ></li>
+                <li class="slide"><img src="../images/food-time-main.jpg" ></li>
+                <li class="slide"><img src="../images/home_cover.png" ></li>
+            </ul>
+        </div>
         <div id="cover"></div>
+        <div class="switch">
+            <div class="slider-left-arrow">
+                <span class="l1"></span>
+                <span class="l2"></span>
+            </div>
+            <div id="current-slide-container">
+                <div class="current-slide"></div>
+                <div class="current-slide"></div>
+                <div class="current-slide"></div>
+            </div>
+            <div class="slider-right-arrow">
+                <span class="l1"></span>
+                <span class="l2"></span>
+            </div>
+        </div>
         <div id="headline">
             <h1>Future Gulf Company</h1>
             <h6>Commerce Général, Franchise, Investissement Immobilier.</h6>
@@ -199,6 +222,7 @@
             </ul>
             <label class="copyright">Copyright &copy; Future Gulf Company 2024</label>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../index.js"></script>        
 </body>
 </html>

@@ -153,7 +153,7 @@ nav .nav-links li a:hover {
     background: white;
     width: 160px;
     height: 200px;
-    right: 5.5%;
+    right: 3.5%;
     top: 75px;
     box-shadow: 0 0px 4px 0.5px black;
 }
@@ -305,16 +305,30 @@ nav.sticky.active .nav-links li a {
     color:rgb(24, 247, 255);
     transition: 0.3s linear;
 }
-#home-cover-front {
-    width: 102%;
+.slider {
+    width: 100%;
+    min-height: 650px;
+    height: 700px;
+    overflow: hidden;
+}
+.slides {
+    display: block;
+    width: 50000px;
+    min-height: 650px;
+    height: 700px;
+}
+.slide {
+    float: left;
+    list-style-type: none;
+    width: 100vw;
+    min-height: 650px;
+    height: 700px;
+}
+.slide img {
+    width: 100vw;
     min-height: 650px;
     height: 700px;
     object-fit: cover;
-}
-@media only screen and (max-width: 960px) {
-    #home-cover-front {
-        object-fit: cover;
-    }
 }
 #cover {
     position: absolute;
@@ -325,6 +339,68 @@ nav.sticky.active .nav-links li a {
     height: 700px;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(1px);
+}
+.switch {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-left-arrow {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    left: 5px;
+    width: 35px;
+    height: 20px;
+    transform: rotate(90deg);
+}
+.slider-right-arrow {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    right: 5px;
+    width: 35px;
+    height: 20px;
+    transform: rotate(-90deg);
+
+}
+.l1, .l2 {
+    position: relative;
+    margin: auto;
+    width: 15px;
+    height: 3.5px;
+    background: white;
+    border-radius: 40px;
+    transition: 0.2s;
+}
+.l1 {
+    left: 4px;
+    transform: rotate(45deg);
+}
+.l2 {
+    right: 4px;
+    transform: rotate(-45deg);
+}
+#current-slide-container {
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.current-slide {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
 }
 h1 {
     margin-bottom: 0 !important;
