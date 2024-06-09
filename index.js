@@ -1,3 +1,12 @@
+// align everything to the right if the document is in arabic
+if (document.querySelector("html").getAttribute("lang") == "ar") {
+    nodes = document.querySelectorAll("h2,h3,p,#brands");
+    for (let i=0;i<nodes.length;i++) {
+        nodes[i].setAttribute("dir", "rtl");
+        nodes[i].style.textAlign = "right";
+    }
+}
+
 // choose language arrow drop down
 const arrow = document.querySelector(".arrow");
 const dropdown = document.querySelector(".dropdown");

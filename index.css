@@ -467,8 +467,28 @@ h1 {
 #clickables {
     width: fit-content;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
+}
+.menu {
+    width: 17vw;
+    height: 4vw;
+    max-width: 170px;
+    min-height: 40px;
+    max-height: 50px;
+    line-height: 5px;
+    background: rgb(234, 234, 234);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(192, 55, 55);
+    font-weight: 900;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+.menu:hover {
+    box-shadow: 0.4px 0.6px 3px 2.5px rgb(208, 75, 75);
+    transition: 0.3s;
 }
 #sublinks {
     width: 17vw;
@@ -490,27 +510,6 @@ h1 {
 }
 #sublinks:hover {
     box-shadow: 0 0 3px 2.5px rgb(255, 255, 255);
-    transition: 0.3s;
-}
-.menu {
-    width: 17vw;
-    height: 4vw;
-    max-width: 170px;
-    min-height: 40px;
-    max-height: 50px;
-    line-height: 5px;
-    background: rgb(234, 234, 234);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: rgb(192, 55, 55);
-    font-weight: 900;
-    margin-right: 15px;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-}
-.menu:hover {
-    box-shadow: 0.4px 0.6px 3px 2.5px rgb(208, 75, 75);
     transition: 0.3s;
 }
 #one-million-menu {
@@ -735,6 +734,10 @@ iframe {
     box-shadow: 0 0 5px 1px rgb(0, 172, 195);
     width: 75vw;
     max-width: 400px;
+}
+#location p {
+    /*force center alignment on arabic page*/
+    text-align: center !important; 
 }
 footer {
     display: flex;
