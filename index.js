@@ -1,4 +1,4 @@
-// align everything to the right if the document is in arabic
+// align appropriate elements to the right if the document is in arabic
 if (document.querySelector("html").getAttribute("lang") == "ar") {
     nodes = document.querySelectorAll("h2,h3,p,#brands");
     for (let i=0;i<nodes.length;i++) {
@@ -35,6 +35,16 @@ hamburger.onclick = function() {
         dropdown.classList.toggle("dropdown-active");
     }
 }
+
+// remove active class on nav once nav-link is clicked
+const navlinks = document.querySelectorAll(".nav-link")
+navlinks.forEach(function(navlink) {
+    navlink.onclick = function() {
+        nav.classList.remove("active");
+        arrow.classList.remove("arrow-active");
+        dropdown.classList.remove("dropdown-active");
+    }
+})
 
 // image slider functionality
 $(function() {
