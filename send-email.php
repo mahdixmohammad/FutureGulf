@@ -13,4 +13,5 @@
   if(mail($toEmail, $name, $mailHeaders)) {
     $return = "Your email was successfully sent.";
   }
-  ?>
+
+  echo "<h2>Your email was successfully sent.</h2>";

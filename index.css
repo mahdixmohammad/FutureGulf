@@ -300,6 +300,8 @@ nav.sticky.active .nav-links li a {
     font-size: clamp(1.5rem, 1.5vw, 1.8rem);
     font-weight: 900;
     border-radius: 5px;
+    box-shadow: 0 0 5px transparent;
+    border: 2px solid transparent;
 }
 #contact-button:hover {
     border: 2px solid rgb(24, 247, 255);
@@ -637,45 +639,93 @@ h1 {
         text-align: left;
     }
 }
-/* #contact {
+#contact {
     display: flex;
-    padding: 0;
+    flex-wrap: wrap;
     text-align: center;
-    justify-content: center;
-    font-weight: bold;
-    height: 850px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    padding: 30px 10px;
     width: 100%;
-    background: rgb(0, 172, 195);
+    background: rgb(2, 119, 134);
+    gap: 50px;
 }
-form h2:first-child {
-    margin: 0;
+#information {
+    width: fit-content;
+    height: 600px;
+    color: white;
+    padding: 40px 0;
+    margin-bottom: 50px;
 }
-form p {
-    margin: 0;
+#information h1 {
+    font-size: 35px;
 }
-form a {
-    color: rgb(0, 188, 213);
+#information iframe {
+    margin: 10px;
+    width: 75vw;
+    max-width: 325px;
+    border: 2px solid rgb(0, 188, 213) !important;
+}
+#information iframe:hover {
+    box-shadow: 0 0 5px rgb(24, 247, 255);
+    transition: 0.3s;
+}
+#information address {
+    color: white;
+}
+.contact-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px 0;
+    padding: 25px;
+    height: 40px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    gap: 10px;
+}
+.contact-info:hover {
+    border: 3px solid rgb(0, 188, 213);
+    background: rgba(0, 188, 213, 0.3);
+    transition: 0.3s linear;
+}
+.contact-info img {
+    display: inline;
+    width: 30px;
+}
+.contact-info a {
+    color: white;
 }
 form {
     background: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
     padding: 3vw 4vw;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    margin: auto;
-    box-shadow: 0 0 5px 1px black;
+    width: 40%;
+    min-width: 400px;
+    max-width: 500px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+form h2 {
+    text-align: center !important;
 }
 form input, form textarea {
     border: 0;
     margin: 10px 0;
     padding: 20px;
     outline: none;
-    background: rgb(211, 211, 211);
+    background: transparent;
     color: black;
     font-size: 16px;
     resize: none;
+    border-bottom: 2px solid rgb(211, 211, 211);
+    font-family: "Calibri";
+}
+form input:focus, form textarea:focus {
+    border-bottom: 2px solid rgb(0, 188, 213);
+    transition: 0.4s;
 }
 ::placeholder {
     color:rgb(75, 75, 75); 
@@ -685,59 +735,35 @@ form input, form textarea {
 }
 form button {
     cursor: pointer;
-    width: 150px;
+    width: 200px;
     height: 50px;
     margin: 20px auto 0;
-    background: rgba(0, 188, 213, 0.5);
-    border: 2px solid black;
-    border-radius: 30px;
-    color: rgb(0, 0, 0);
+    background: rgba(0, 188, 213, 0.8);
+    border: 0px solid black;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 600;
     line-height: 50px;
 }
 form button:hover {
     background: rgb(0, 188, 213);
-    box-shadow: 0 0 10px rgb(0, 188, 213);
-    transition: 0.4s;
-} */
-#contact-us {
-    height: 800px;
-    width: 100%;
-    background: rgb(0, 172, 195);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+    width: 205px;
+    height: 52px;
+    margin: 18px auto 0;
+    box-shadow: 0 0.5px 4px rgb(0, 188, 213);
+    transition: 0.3s;
 }
-#wrapper {
-    background-color: white;
-    min-height: 650px;
-    min-width: fit-content;
-    width: 90%;
-    max-width: 550px;
-    box-shadow: 0 0 5px 1px black;
-    border-radius: 25px;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#contact-us h1 {
-    font-size: clamp(2.3rem, 7vw, 2.7rem);
-    margin-bottom: 15px !important;
-}
-address p {
-    margin: 7px 0;
-}
-iframe {
-    box-shadow: 0 0 5px 1px rgb(0, 172, 195);
-    width: 75vw;
-    max-width: 400px;
-}
-#location p {
-    /*force center alignment on arabic page*/
-    text-align: center !important; 
+@media only screen and (max-width: 830px) {
+    #information {
+        margin: 0;
+    }
+    form {
+        margin: 0;
+        min-width: 200px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
 footer {
     display: flex;
