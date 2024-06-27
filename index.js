@@ -1,6 +1,8 @@
+"use strict"
+
 // align appropriate elements to the right if the document is in arabic
 if (document.querySelector("html").getAttribute("lang") == "ar") {
-    nodes = document.querySelectorAll("h2,h3,p,#brands");
+    const nodes = document.querySelectorAll("h2,h3,p,#brands");
     for (let i=0;i<nodes.length;i++) {
         nodes[i].setAttribute("dir", "rtl");
         nodes[i].style.textAlign = "right";
@@ -17,18 +19,25 @@ arrow.addEventListener("click", () => {
 });
 
 // user scrolls down
+const nav = document.querySelector("nav");
+const navGlobeIcon = document.querySelector("nav .language img");
+const srcBlack = (document.querySelector("html").getAttribute("lang") == "en") ? "icons/globe-black-icon.png" : "../icons/globe-black-icon.png";
+const srcWhite = (document.querySelector("html").getAttribute("lang") == "en") ? "icons/globe-white-icon.png" : "../icons/globe-white-icon.png";
 window.addEventListener("scroll", function() {
-    let nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
+
+    // change the nav globe icon color
+    if (window.scrollY > 0) {
+        navGlobeIcon.setAttribute("src", srcBlack);
+    } else {
+        navGlobeIcon.setAttribute("src", srcWhite);
+    }
 })
 
 // user clicks on the hamburger icon (small devices only)
-hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector("nav");
-
+const hamburger = document.querySelector(".hamburger");
 hamburger.onclick = function() {
     nav.classList.toggle("active");
-
     // ensures that the ui cannot be bugged (resets to original state)
     if (dropdown.classList.contains("dropdown-active")) {
         arrow.classList.toggle("arrow-active");
@@ -126,5 +135,4 @@ $(function() {
         if (animating) return;
         moveRight();
     });
-    detectIdle();
 });
