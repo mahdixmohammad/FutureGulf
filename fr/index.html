@@ -13,6 +13,7 @@
 </head>
 <body>
     <nav>
+        <div class="white-nav"></div>
         <a href=""><img src="../images/future_gulf.png" id="logo"></a>
         <ul class="nav-links">
             <li><a class="nav-link" href="#about">À propos</a></li>
@@ -21,7 +22,7 @@
             <div class="horizontal-line"></div>
             <li class="language">
                 <div class="arrow">
-                    <img src="../images/france-flag.png" class="flag">
+                    <img src="../icons/globe-white-icon.png" class="globe">
                     <a>Français</a>
                     <div>
                         <span class="larr"></span>
@@ -30,13 +31,11 @@
                 </div>
             </li>
         </ul>
-        <div class="dropdown">
-            <ul>
-                <li id="french"><img src="../images/uk-flag.png" class="flag"><a href="../">Anglais</a></li>
-                <li id="arabic"><img src="../images/saudi-flag.png" class="flag"><a href="../ar/">Arabe</a></li>
-                <li id="spanish"><img src="../images/spain-flag.png" class="flag"><a href="../es/">Espagnol</a></li>
-            </ul>
-        </div>
+        <ul class="dropdown">
+            <li><a rel="alternate" href="../">Anglais</a></li>
+            <li><a rel="alternate" href="../ar/">Arabe</a></li>
+            <li><a rel="alternate" href="../es/">Espagnol</a></li>
+        </ul>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -211,9 +210,9 @@
             </div>
             <form method="post" action="send-email.php">
                 <h2>Contactez-nous!</h2>
-                <input type="text" id="name" name="name" placeholder="Nom complet" required>
-                <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
-                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                <input type="text" id="name" name="name" placeholder="Nom complet" autocomplete="off" required>
+                <input type="email" id="email" name="email" placeholder="Adresse e-mail" autocomplete="off" required>
+                <input type="text" id="subject" name="subject" placeholder="Sujet" autocomplete="off" required>
                 <textarea id="message" rows="4" name="message" placeholder="Message"></textarea>
                 <button type="submit"><img src="../icons/send-icon.png">Envoyer</button>
                 <input type="hidden" name="_captcha" value="false">

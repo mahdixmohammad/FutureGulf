@@ -13,6 +13,7 @@
 </head>
 <body>
     <nav>
+        <div class="white-nav"></div>
         <a href=""><img src="../images/future_gulf.png" id="logo"></a>
         <ul class="nav-links">
             <li><a class="nav-link" href="#about">حول</a></li>
@@ -21,7 +22,7 @@
             <div class="horizontal-line"></div>
             <li class="language">
                 <div class="arrow">
-                    <img src="../images/saudi-flag.png" class="flag">
+                    <img src="../icons/globe-white-icon.png" class="globe">
                     <a>العربية</a>
                     <div>
                         <span class="larr"></span>
@@ -30,13 +31,11 @@
                 </div>
             </li>
         </ul>
-        <div class="dropdown">
-            <ul>
-                <li><img src="../images/uk-flag.png" class="flag"><a href="../">الإنجليزية</a></li>
-                <li><img src="../images/france-flag.png" class="flag"><a href="../fr/">الفرنسية</a></li>
-                <li><img src="../images/spain-flag.png" class="flag"><a href="../es/">الإسبانية</a></li>
-            </ul>
-        </div>
+        <ul class="dropdown">
+            <li><a rel="alternate" href="../">الإنجليزية</a></li>
+            <li><a rel="alternate" href="../fr/">الفرنسية</a></li>
+            <li><a rel="alternate" href="../es/">الإسبانية</a></li>
+        </ul>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -203,9 +202,9 @@
         </div>
         <form method="post" action="send-email.php" dir="rtl">
             <h2>تواصل معنا!</h2>
-            <input type="text" id="name" name="name" placeholder="اسم كامل" required>
-            <input type="email" id="email" name="email" placeholder="عنوان البريد الإلكتروني" required>
-            <input type="text" id="subject" name="subject" placeholder="موضوع" required>
+            <input type="text" id="name" name="name" placeholder="اسم كامل" autocomplete="off" required>
+            <input type="email" id="email" name="email" placeholder="عنوان البريد الإلكتروني" autocomplete="off" required>
+            <input type="text" id="subject" name="subject" placeholder="موضوع" autocomplete="off" required>
             <textarea id="message" rows="4" name="message" placeholder="رسالة"></textarea>
             <button type="submit" dir="ltr"><img src="../icons/send-icon.png">أرسل</button>
             <input type="hidden" name="_captcha" value="false">

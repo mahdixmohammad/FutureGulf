@@ -37,21 +37,31 @@ nav {
     justify-content: space-between;
     z-index: 1000;
     padding: 0 3%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
-nav.sticky {
-    background: rgba(255, 255, 255, 0.9);
+nav .white-nav {
+    width: 100%;
     height: 70px;
+    left: -100%;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 5px 0.5px black;
+    box-shadow: 0 0 3px 0.1px rgb(132, 132, 132);
+    transition: left 0.4s;
+}
+nav.sticky .white-nav {
+    left: 0;
 }
 nav.sticky ul li a {
     color: black;
+    transition: color 0.4s;
 }
 nav.sticky .horizontal-line {
     background: black;
 }
-nav.sticky ul li a:hover {
+nav.sticky .nav-links a:hover {
     border-bottom: 3px solid black;
 }
 nav.sticky .arrow:hover {
@@ -89,13 +99,12 @@ nav .nav-links li a:hover {
     background: white;
     margin: auto 10px;
 }
-.flag {
+.globe {
     width: 28px;
     height: 28px;
     margin: auto 5px;
     margin-right: 10px ;
     margin-top: 1px;
-    background-image: url(images/uk-flag.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -139,50 +148,44 @@ nav .nav-links li a:hover {
 .arrow-active .rarr {
     transform: rotate(45deg);
 }
-@media only screen and (max-width: 710px) {
-    nav {
-        justify-content: center;
-    }
-}
 .dropdown {
-    display: none;
-    position: absolute;
-    background: white;
     width: 160px;
-    height: 200px;
+    height: fit-content;
+    background: white;
+    position: absolute;
     right: 3.5%;
-    top: 75px;
-    box-shadow: 0 0px 4px 0.5px black;
-}
-.dropdown-active.dropdown {
-    display: inline;
-}
-.dropdown ul {
+    top: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    padding: 10px 10px;
+    gap: 10px;
+    box-shadow: 0 0 3px 0.1px rgb(132, 132, 132);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    padding: 10px 5px;
 }
-.dropdown ul li {
+.dropdown-active.dropdown {
+    top: 75px;
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown li a {
     display: flex;
-    width: fit-content;
-    height: 35px;
-    padding: 0px;
-}
-.dropdown ul li img:hover {
-    margin-bottom: auto 5px;
-}
-.dropdown ul li a {
-    color: black !important;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid transparent;
+    color: black;
     font-size: 22px;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 10px;
 }
-.dropdown ul li:hover {
-    border-bottom: 3px solid black;
-    transition: all 0.1s ease-out;
+.dropdown li a:hover {
+    border: 3px solid rgb(0, 188, 213);
+    background: rgba(0, 188, 213, 0.3);
+    transition: 0.3s linear;
 }
 .hamburger {
     display: none;
@@ -194,16 +197,29 @@ nav .nav-links li a:hover {
     height: 3.5px;
     margin: 6px 0;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.hamburger:hover .line {
+    background: rgb(0, 188, 213);
 }
 @media only screen and (max-width: 710px) {
+    nav {
+        justify-content: center;
+    }
+    nav .nav-links {
+        position: absolute;
+        top: -50vh;
+    }
     .hamburger {
         display: block;
         position: fixed;
         right: 20px;
     }
-    nav .nav-links {
-        position: absolute;
-        top: -50vh;
+    .dropdown ul li:hover {
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+    .sticky .dropdown ul li:hover {
+        border-bottom: 3px solid rgb(0, 0, 0);
     }
 }
 /* when the user clicks the hamburger icon (small devices only) */
@@ -233,14 +249,20 @@ nav .nav-links li a:hover {
 }
 .active .dropdown {
     right: initial;
-    top: 430px;
+    top: 435px;
     background: transparent;
-    margin-right: 10px;
+    margin-right: -5px;
     box-shadow: none;
 }
 .active .dropdown ul li a {
     color: white !important;
     margin-right: 10px;
+}
+.active .arrow div {
+    margin-top: -4px;
+}
+.active .hamburger .line {
+    background: rgb(0, 188, 213);
 }
 nav.sticky.active .dropdown ul li a {
     color: black !important;
@@ -251,7 +273,7 @@ nav.sticky.active {
 nav.sticky.active .nav-links {
     background: rgba(255, 255, 255, 0.96);
 }
-nav.sticky.active .nav-links li a {
+nav.sticky.active li a {
     color: rgb(0, 0, 0) !important;
 }
 .active #logo {
@@ -269,6 +291,9 @@ nav.sticky.active .nav-links li a {
     margin-top: 50px !important;
     font-size: 22px !important;
     line-height: 40px;
+}
+section {
+    scroll-margin-top: 70px;
 }
 #home {
     background: rgb(18, 0, 0);
@@ -312,21 +337,18 @@ nav.sticky.active .nav-links li a {
 }
 .slider {
     width: 100%;
-    min-height: 650px;
     height: 700px;
     overflow: hidden;
 }
 .slides {
     display: block;
     width: 50000px;
-    min-height: 650px;
     height: 700px;
 }
 .slide {
     float: left;
     list-style-type: none;
     width: 100vw;
-    min-height: 650px;
     height: 700px;
 }
 .slide img {
@@ -340,7 +362,6 @@ nav.sticky.active .nav-links li a {
     left: 0;
     top: 0;
     width: 100%;
-    min-height: 650px;
     height: 700px;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(1px);
