@@ -17,7 +17,7 @@ html {
 	src: url(fonts/ArialNovaCond.ttf);
 }
 body {
-	background: white;
+	background: rgb(255, 255, 255);
 	font-family: Poppins, ArialNovaC, "Calibri", sans-serif;
 	text-align: center;
 	font-size: 18px;
@@ -378,7 +378,7 @@ h1 {
 .title {
 	font-family: ArialNovaC;
 	letter-spacing: -1px;
-	font-size: 46px;
+	font-size: 46px !important;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: clamp(2.3rem, 7vw, 2.7rem);
@@ -540,13 +540,12 @@ h1 {
 	height: fit-content;
 	padding: 30px 10px;
 	width: 100%;
-	background: rgb(2, 119, 134);
+	background: rgb(255, 255, 255);
 	gap: 50px;
 }
 #information {
 	width: fit-content;
 	height: 600px;
-	color: white;
 	padding: 20px 0;
 	display: flex;
 	flex-direction: column;
@@ -555,20 +554,18 @@ h1 {
 }
 #information h1 {
 	font-size: 35px;
+	color: rgb(0, 131, 148);
 }
 #information iframe {
 	margin: 10px;
 	width: 75vw;
 	max-width: 325px;
-	border: 2px solid rgb(0, 188, 213) !important;
+	box-shadow: 0px 0px 2px black;
 }
 #information iframe:hover {
 	box-shadow: 0 0 5px rgb(24, 247, 255);
 	transform: scale(1.1);
 	transition: 0.3s;
-}
-#information address {
-	color: white;
 }
 .contact-info {
 	display: flex;
@@ -582,7 +579,7 @@ h1 {
 	border-radius: 12px;
 	border: 3px solid transparent;
 	gap: 10px;
-	color: white;
+	color: rgb(2, 119, 134);
 }
 .contact-info:hover {
 	border: 3px solid rgb(0, 188, 213);
@@ -595,6 +592,7 @@ h1 {
 }
 form {
 	background: rgb(240, 240, 240);
+	background: rgb(219, 219, 219);
 	display: flex;
 	flex-direction: column;
 	padding: 3vw 4vw;
@@ -617,7 +615,7 @@ form textarea {
 	color: black;
 	font-size: 16px;
 	resize: none;
-	border-bottom: 2px solid rgb(211, 211, 211);
+	border-bottom: 2px solid rgb(183, 182, 182);
 	font-family: "Calibri";
 }
 form input:focus,
@@ -643,6 +641,7 @@ form button {
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 50px;
+	font-family: Poppins;
 }
 form button:hover {
 	transform: scale(1.05);
@@ -663,6 +662,7 @@ footer {
 	justify-content: center;
 	height: 155px;
 	font-size: 14px;
+	background: rgb(241, 241, 241);
 }
 footer * {
 	color: rgb(130, 130, 130);
