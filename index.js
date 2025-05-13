@@ -136,3 +136,6 @@ $(function() {
         moveRight();
     });
 });
+
+// automatically update the copyright's year
+document.querySelector(".copyright").textContent = "Copyright © Future Gulf Company " + new Date().getUTCFullYear();
